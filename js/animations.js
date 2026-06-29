@@ -185,8 +185,8 @@
   function initScrollAnimations() {
     const heroAnims = document.querySelectorAll(".hero .anim:not(.in-view)");
     heroAnims.forEach((el) => {
-      const delay = (parseInt(el.dataset.delay, 10) || 0) * 120;
-      setTimeout(() => el.classList.add("in-view"), 200 + delay);
+      const delay = (parseInt(el.dataset.delay, 10) || 0) * 60;
+      setTimeout(() => el.classList.add("in-view"), 80 + delay);
     });
 
     if (!window._scrollObserver) {
@@ -198,16 +198,16 @@
             const delay = parseInt(el.dataset.delay, 10) || 0;
             const stagger = el.dataset.stagger;
             if (stagger !== undefined && stagger !== "") {
-              setTimeout(() => el.classList.add("in-view"), parseInt(stagger, 10) * 90);
+              setTimeout(() => el.classList.add("in-view"), parseInt(stagger, 10) * 45);
             } else if (delay) {
-              setTimeout(() => el.classList.add("in-view"), delay * 100);
+              setTimeout(() => el.classList.add("in-view"), delay * 45);
             } else {
               el.classList.add("in-view");
             }
             window._scrollObserver.unobserve(el);
           });
         },
-        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+        { threshold: 0.08, rootMargin: "0px 0px -16px 0px" }
       );
     }
 
@@ -217,12 +217,7 @@
   }
 
   function initParallax() {
-    const hero = document.querySelector(".hero-deco");
-    if (!hero) return;
-
-    window.addEventListener("scroll", () => {
-      hero.style.transform = `translateY(${window.scrollY * 0.06}px)`;
-    }, { passive: true });
+    /* disabled — chip stays fixed in place */
   }
 
   document.addEventListener("DOMContentLoaded", () => {

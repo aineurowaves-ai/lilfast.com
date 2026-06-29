@@ -112,13 +112,15 @@ ul { list-style: none; }
 /* ── Scroll animations ── */
 .anim {
   opacity: 0;
-  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
-.anim[data-anim="fade-up"] { transform: translateY(40px); }
-.anim[data-anim="fade-left"] { transform: translateX(-40px); }
-.anim[data-anim="fade-right"] { transform: translateX(40px); }
-.anim[data-anim="scale-in"] { transform: scale(0.92); }
-.anim.in-view { opacity: 1; transform: none; }
+.anim[data-anim="fade-up"] { transform: translateY(24px); }
+.anim[data-anim="fade-left"] { transform: translateX(-24px); }
+.anim[data-anim="fade-right"] { transform: translateX(24px); }
+.anim[data-anim="scale-in"] { transform: scale(0.96); }
+.anim.in-view { opacity: 1; transform: none; will-change: auto; }
 
 /* ── Header ── */
 .site-header {
@@ -321,11 +323,6 @@ ul { list-style: none; }
 .cpu-visual {
   position: relative;
   width: min(100%, 340px);
-  animation: cpuFloat 5s ease-in-out infinite;
-}
-@keyframes cpuFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 .cpu-glow-ring {
   position: absolute;
@@ -1111,7 +1108,7 @@ ul { list-style: none; }
     gap: 1rem;
   }
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-deco { order: -1; max-width: 280px; margin-inline: auto; }
+  .hero-deco { max-width: 280px; margin-inline: auto; margin-top: 1.5rem; }
   .about-grid { grid-template-columns: 1fr; }
   .about-card--wide { grid-column: auto; }
   .about-feature-body { grid-template-columns: 1fr; }
@@ -1161,14 +1158,37 @@ ul { list-style: none; }
   .process-card .process-arrow { display: none !important; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
+  .hero-pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+  .hero-pillars li {
+    text-align: center;
+    width: 100%;
+    padding: 0.55rem 1rem;
+  }
   .contact-panel { padding: 2rem; }
   .block { padding: 4rem 0; }
+  .header-end { gap: 0.45rem; }
+  .lang-switcher { flex-shrink: 0; }
+  .lang-btn {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.42rem;
+  }
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 @media (max-width: 480px) {
   .brand-logo { height: 38px; }
   .industries-grid { grid-template-columns: 1fr; }
-  .lang-switcher { display: none; }
+  .lang-btn {
+    font-size: 0.58rem;
+    padding: 0.32rem 0.38rem;
+  }
 }
 
 [data-theme="dark"] .motor-housing {
