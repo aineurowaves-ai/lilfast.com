@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lilfast — engineering, integration and manufacturing solutions for advanced embedded electronic systems.">
+  <title>Lilfast — Building Reliable Embedded Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <script>
+    (function () {
+      if (localStorage.getItem("lilfast-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="bg-tiles" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header id="header" class="site-header">
+    <div class="container header-row">
+      <a href="#" class="brand-mark">
+        <img src="assets/logo.png" alt="Lilfast" class="brand-logo">
+      </a>
+      <nav id="nav-links" class="site-nav">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#industries" data-i18n="nav.industries">Industries</a>
+        <a href="#why" data-i18n="nav.why">Why Lilfast</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-end">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-sm" data-i18n="hero.cta2">Discuss Your Project</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <canvas id="hero-stars" aria-hidden="true"></canvas>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="hero-domain anim" data-anim="fade-up">lilfast.com</p>
+        <h1 class="anim" data-anim="fade-up" data-delay="1" data-i18n="hero.headline">Building Reliable Embedded Infrastructure</h1>
+        <div class="hero-text-block">
+          <p class="hero-lead anim" data-anim="fade-up" data-delay="2" data-i18n="hero.sub1"></p>
+          <p class="anim" data-anim="fade-up" data-delay="3" data-i18n="hero.sub2"></p>
+        </div>
+        <div class="hero-actions anim" data-anim="fade-up" data-delay="4">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Let's Build Your Product</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta2">Discuss Your Project</a>
+        </div>
+        <ul class="hero-pillars anim" data-anim="fade-up" data-delay="5">
+          <li data-i18n="pillars.p1">Electrical Engineering</li>
+          <li data-i18n="pillars.p2">Embedded Electronics</li>
+          <li data-i18n="pillars.p3">Industrial Manufacturing</li>
+        </ul>
+      </div>
+      <div class="hero-deco anim" data-anim="scale-in" data-delay="2" aria-hidden="true">
+        <div class="cpu-visual">
+          <div class="cpu-glow-ring"></div>
+          <svg class="cpu-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- pins top -->
+            <g class="cpu-pins cpu-pins--top">
+              <rect x="88" y="28" width="8" height="22" rx="1" class="pin"/><rect x="108" y="28" width="8" height="22" rx="1" class="pin"/>
+              <rect x="128" y="28" width="8" height="22" rx="1" class="pin"/><rect x="148" y="28" width="8" height="22" rx="1" class="pin"/>
+              <rect x="168" y="28" width="8" height="22" rx="1" class="pin"/><rect x="188" y="28" width="8" height="22" rx="1" class="pin"/>
+              <rect x="208" y="28" width="8" height="22" rx="1" class="pin"/><rect x="228" y="28" width="8" height="22" rx="1" class="pin"/>
+            </g>
+            <!-- pins bottom -->
+            <g class="cpu-pins cpu-pins--bottom">
+              <rect x="88" y="270" width="8" height="22" rx="1" class="pin"/><rect x="108" y="270" width="8" height="22" rx="1" class="pin"/>
+              <rect x="128" y="270" width="8" height="22" rx="1" class="pin"/><rect x="148" y="270" width="8" height="22" rx="1" class="pin"/>
+              <rect x="168" y="270" width="8" height="22" rx="1" class="pin"/><rect x="188" y="270" width="8" height="22" rx="1" class="pin"/>
+              <rect x="208" y="270" width="8" height="22" rx="1" class="pin"/><rect x="228" y="270" width="8" height="22" rx="1" class="pin"/>
+            </g>
+            <!-- pins left -->
+            <g class="cpu-pins cpu-pins--left">
+              <rect x="28" y="88" width="22" height="8" rx="1" class="pin"/><rect x="28" y="108" width="22" height="8" rx="1" class="pin"/>
+              <rect x="28" y="128" width="22" height="8" rx="1" class="pin"/><rect x="28" y="148" width="22" height="8" rx="1" class="pin"/>
+              <rect x="28" y="168" width="22" height="8" rx="1" class="pin"/><rect x="28" y="188" width="22" height="8" rx="1" class="pin"/>
+              <rect x="28" y="208" width="22" height="8" rx="1" class="pin"/><rect x="28" y="228" width="22" height="8" rx="1" class="pin"/>
+            </g>
+            <!-- pins right -->
+            <g class="cpu-pins cpu-pins--right">
+              <rect x="270" y="88" width="22" height="8" rx="1" class="pin"/><rect x="270" y="108" width="22" height="8" rx="1" class="pin"/>
+              <rect x="270" y="128" width="22" height="8" rx="1" class="pin"/><rect x="270" y="148" width="22" height="8" rx="1" class="pin"/>
+              <rect x="270" y="168" width="22" height="8" rx="1" class="pin"/><rect x="270" y="188" width="22" height="8" rx="1" class="pin"/>
+              <rect x="270" y="208" width="22" height="8" rx="1" class="pin"/><rect x="270" y="228" width="22" height="8" rx="1" class="pin"/>
+            </g>
+            <!-- package -->
+            <rect class="cpu-package" x="70" y="70" width="180" height="180" rx="14" stroke="currentColor" stroke-width="2.5"/>
+            <!-- inner die -->
+            <rect x="108" y="108" width="104" height="104" rx="6" class="cpu-die" stroke="currentColor" stroke-width="1.5"/>
+            <!-- circuit grid inside die -->
+            <line x1="108" y1="134" x2="212" y2="134" class="die-trace"/><line x1="108" y1="160" x2="212" y2="160" class="die-trace"/>
+            <line x1="108" y1="186" x2="212" y2="186" class="die-trace"/><line x1="134" y1="108" x2="134" y2="212" class="die-trace"/>
+            <line x1="160" y1="108" x2="160" y2="212" class="die-trace"/><line x1="186" y1="108" x2="186" y2="212" class="die-trace"/>
+            <!-- core -->
+            <rect class="cpu-core" x="142" y="142" width="36" height="36" rx="4"/>
+            <!-- data flow traces -->
+            <path class="data-flow df-1" d="M160 50 V108"/><path class="data-flow df-2" d="M160 212 V270"/>
+            <path class="data-flow df-3" d="M50 160 H108"/><path class="data-flow df-4" d="M212 160 H270"/>
+            <!-- signal dots -->
+            <circle class="signal-dot sd-1" cx="160" cy="80" r="3"/><circle class="signal-dot sd-2" cx="160" cy="240" r="3"/>
+            <circle class="signal-dot sd-3" cx="80" cy="160" r="3"/><circle class="signal-dot sd-4" cx="240" cy="160" r="3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <canvas class="section-canvas" data-canvas="about" aria-hidden="true"></canvas>
+    <div class="container">
+      <header class="block-head anim" data-anim="fade-up">
+        <h2 data-i18n="about.title">About Lilfast</h2>
+      </header>
+      <div class="about-modern anim" data-anim="fade-up" data-delay="1">
+        <div class="about-feature">
+          <div class="about-feature-body">
+            <div class="about-hook-row">
+              <span class="about-icon about-icon--light" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </span>
+              <p class="about-hook" data-i18n="about.p1"></p>
+            </div>
+            <div class="about-blueprint" aria-hidden="true">
+              <svg class="blueprint-svg" viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="12" width="276" height="196" rx="4" class="bp-frame"/>
+                <line x1="12" y1="110" x2="288" y2="110" class="bp-guide"/>
+                <line x1="150" y1="12" x2="150" y2="208" class="bp-guide"/>
+                <rect x="36" y="44" width="130" height="96" rx="2" class="bp-pcb"/>
+                <path d="M52 60 H154 M52 84 H118 M52 108 H154 M76 60 V124 M110 60 V124 M142 72 V116" class="bp-trace"/>
+                <circle cx="52" cy="60" r="2.5" class="bp-pad"/>
+                <circle cx="76" cy="84" r="2.5" class="bp-pad"/>
+                <circle cx="110" cy="60" r="2.5" class="bp-pad"/>
+                <circle cx="142" cy="72" r="2.5" class="bp-pad"/>
+                <rect x="62" y="96" width="18" height="12" rx="1" class="bp-chip"/>
+                <rect x="96" y="96" width="10" height="10" rx="1" class="bp-chip"/>
+                <line x1="36" y1="152" x2="166" y2="152" class="bp-dim"/>
+                <line x1="36" y1="148" x2="36" y2="156" class="bp-dim"/>
+                <line x1="166" y1="148" x2="166" y2="156" class="bp-dim"/>
+                <text x="101" y="168" class="bp-label">130</text>
+                <circle cx="220" cy="92" r="34" class="bp-gear-ring"/>
+                <g class="bp-gear">
+                  <circle cx="220" cy="92" r="15" class="bp-gear-core"/>
+                  <line x1="220" y1="58" x2="220" y2="68" class="bp-gear-spoke"/>
+                  <line x1="220" y1="116" x2="220" y2="126" class="bp-gear-spoke"/>
+                  <line x1="186" y1="92" x2="196" y2="92" class="bp-gear-spoke"/>
+                  <line x1="244" y1="92" x2="254" y2="92" class="bp-gear-spoke"/>
+                  <line x1="196" y1="68" x2="203" y2="75" class="bp-gear-spoke"/>
+                  <line x1="237" y1="109" x2="244" y2="116" class="bp-gear-spoke"/>
+                  <line x1="196" y1="116" x2="203" y2="109" class="bp-gear-spoke"/>
+                  <line x1="237" y1="75" x2="244" y2="68" class="bp-gear-spoke"/>
+                </g>
+                <line x1="254" y1="58" x2="268" y2="58" class="bp-leader"/>
+                <line x1="254" y1="126" x2="268" y2="126" class="bp-leader"/>
+                <line x1="268" y1="58" x2="268" y2="126" class="bp-dim"/>
+                <line x1="264" y1="58" x2="272" y2="58" class="bp-dim"/>
+                <line x1="264" y1="126" x2="272" y2="126" class="bp-dim"/>
+                <text x="278" y="96" class="bp-label">68</text>
+                <line x1="12" y1="12" x2="32" y2="12" class="bp-corner"/><line x1="12" y1="12" x2="12" y2="32" class="bp-corner"/>
+                <line x1="288" y1="12" x2="268" y2="12" class="bp-corner"/><line x1="288" y1="12" x2="288" y2="32" class="bp-corner"/>
+                <line x1="12" y1="208" x2="32" y2="208" class="bp-corner"/><line x1="12" y1="208" x2="12" y2="188" class="bp-corner"/>
+                <line x1="288" y1="208" x2="268" y2="208" class="bp-corner"/><line x1="288" y1="208" x2="288" y2="188" class="bp-corner"/>
+                <rect x="12" y="12" width="276" height="196" rx="4" class="bp-scan"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M4 12H2M22 12h-2M12 4V2M12 22v-2"/></svg>
+            </span>
+            <p data-i18n="about.p2"></p>
+          </div>
+          <div class="about-card">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5V12M8.5 17.5L10 14.5M15.5 17.5L14 14.5"/></svg>
+            </span>
+            <p data-i18n="about.p3"></p>
+          </div>
+          <div class="about-card about-card--wide">
+            <span class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </span>
+            <p data-i18n="about.p4"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block services" id="services">
+    <div class="container">
+      <header class="block-head anim" data-anim="fade-up">
+        <h2 data-i18n="services.title">What We Do</h2>
+        <p class="block-intro" data-i18n="services.intro"></p>
+      </header>
+      <div id="services-grid" class="services-bento"></div>
+    </div>
+  </section>
+
+  <section class="block industries-band" id="industries">
+    <canvas class="section-canvas section-canvas--dark" data-canvas="industries" aria-hidden="true"></canvas>
+    <div class="container">
+      <header class="block-head block-head--light anim" data-anim="fade-up">
+        <h2 data-i18n="industries.title">Industries We Support</h2>
+        <p class="block-intro" data-i18n="industries.desc"></p>
+      </header>
+      <div id="industries-grid" class="industries-grid"></div>
+    </div>
+  </section>
+
+  <section class="block why" id="why">
+    <div class="container">
+      <header class="block-head anim" data-anim="fade-up">
+        <h2 data-i18n="why.title">Why Customers Choose Lilfast</h2>
+      </header>
+      <div id="why-list" class="why-list"></div>
+    </div>
+  </section>
+
+  <section class="block process" id="process">
+    <div class="container">
+      <header class="block-head anim" data-anim="fade-up">
+        <h2 data-i18n="process.title">Our Engineering Process</h2>
+      </header>
+      <div id="process-track" class="process-grid"></div>
+    </div>
+  </section>
+
+  <section class="block philosophy-band" id="philosophy">
+    <canvas id="philosophy-canvas" aria-hidden="true"></canvas>
+    <div class="container philosophy-wrap anim" data-anim="fade-up">
+      <p class="philosophy-label" data-i18n="philosophy.title">Our Philosophy</p>
+      <p class="philosophy-line" data-i18n="philosophy.p1"></p>
+      <p class="philosophy-line philosophy-line--mid" data-i18n="philosophy.p2"></p>
+      <p class="philosophy-line philosophy-line--hero" data-i18n="philosophy.p3"></p>
+      <p class="philosophy-closing" data-i18n="philosophy.p4"></p>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="container">
+      <div class="contact-panel anim" data-anim="scale-in">
+        <div class="contact-layout">
+          <div class="contact-content">
+            <h2 data-i18n="contact.title"></h2>
+            <p data-i18n="contact.desc"></p>
+            <p data-i18n="contact.desc2"></p>
+            <div class="contact-actions">
+              <a href="mailto:office@lilfast.com" class="btn btn-primary btn-lg" data-i18n="contact.cta">Contact Us</a>
+              <a href="mailto:office@lilfast.com" class="contact-mail" data-i18n="contact.email">office@lilfast.com</a>
+            </div>
+          </div>
+          <div class="contact-visual" aria-hidden="true">
+            <div class="motor-visual">
+              <div class="motor-glow"></div>
+              <svg class="motor-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="118" class="motor-housing"/>
+                <circle cx="150" cy="150" r="108" class="motor-stator-ring"/>
+                <g class="motor-stator">
+                  <circle cx="150" cy="150" r="88" class="motor-stator-core"/>
+                  <g class="motor-coils">
+                    <path d="M150 62 A88 88 0 0 1 238 150" class="motor-coil"/>
+                    <path d="M238 150 A88 88 0 0 1 150 238" class="motor-coil"/>
+                    <path d="M150 238 A88 88 0 0 1 62 150" class="motor-coil"/>
+                    <path d="M62 150 A88 88 0 0 1 150 62" class="motor-coil"/>
+                  </g>
+                  <line x1="150" y1="62" x2="150" y2="78" class="motor-tooth"/>
+                  <line x1="238" y1="150" x2="222" y2="150" class="motor-tooth"/>
+                  <line x1="150" y1="238" x2="150" y2="222" class="motor-tooth"/>
+                  <line x1="62" y1="150" x2="78" y2="150" class="motor-tooth"/>
+                  <line x1="212" y1="88" x2="200" y2="100" class="motor-tooth"/>
+                  <line x1="212" y1="212" x2="200" y2="200" class="motor-tooth"/>
+                  <line x1="88" y1="212" x2="100" y2="200" class="motor-tooth"/>
+                  <line x1="88" y1="88" x2="100" y2="100" class="motor-tooth"/>
+                </g>
+                <g class="motor-rotor">
+                  <circle cx="150" cy="150" r="52" class="motor-rotor-body"/>
+                  <rect x="142" y="102" width="16" height="22" rx="2" class="motor-magnet"/>
+                  <rect x="142" y="176" width="16" height="22" rx="2" class="motor-magnet"/>
+                  <rect x="102" y="142" width="22" height="16" rx="2" class="motor-magnet"/>
+                  <rect x="176" y="142" width="22" height="16" rx="2" class="motor-magnet"/>
+                  <circle cx="150" cy="150" r="14" class="motor-shaft"/>
+                  <circle cx="150" cy="150" r="6" class="motor-shaft-core"/>
+                </g>
+                <path d="M150 268 V290" class="motor-lead"/>
+                <path d="M130 290 H170" class="motor-lead"/>
+                <circle cx="130" cy="290" r="4" class="motor-terminal"/>
+                <circle cx="170" cy="290" r="4" class="motor-terminal"/>
+                <path class="motor-spark ms-1" d="M150 118 V98"/>
+                <path class="motor-spark ms-2" d="M202 150 H222"/>
+                <path class="motor-spark ms-3" d="M150 202 V222"/>
+                <path class="motor-spark ms-4" d="M98 150 H78"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <img src="assets/logo.png" alt="Lilfast" class="footer-logo">
+      <p class="footer-tag" data-i18n="footer.tagline"></p>
+      <p class="footer-copy">&copy; <span id="year"></span> <span data-i18n="footer.company">Lilfast Sp. z o.o.</span> &mdash; <span data-i18n="footer.rights"></span></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/i18n.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
